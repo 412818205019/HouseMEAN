@@ -1,0 +1,29 @@
+
+<body>
+    <div class="container">
+    <div *ngIf="!resetSuccess">
+        <div class="form">
+        <form [formGroup]="resetPasswordForm" (ngSubmit)="onSubmit()">
+          <label for="newPassword">New Password:</label>
+          <input type="password" id="newPassword" formControlName="newPassword" required>
+      
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
+      
+          <!-- Display an error message if passwords do not match -->
+          <div *ngIf="resetPasswordForm.hasError('passwordMismatch')">
+            Passwords do not match.
+          </div>
+      
+          <button type="submit" [disabled]="!resetPasswordForm.valid">ereset Password</button>
+        </form>
+      </div>
+    </div>
+      <div *ngIf="resetSuccess">
+        <div class="successful">
+        <p>Password ereset successfully!</p>
+        <button class="login-button"(click)="redirectToLogin()">Go to Login</button>
+    </div>
+      </div>
+    </div>
+    </body>

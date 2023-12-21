@@ -1,0 +1,20 @@
+<div class="login-container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form (submit)="onSubmit()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        <p><a (click)="storeEmailForReset()" routerLink="/jsresetpass">Reset Password</a></p>
+        <button type="submit">Login</button>
+      </form>
+  
+      <!-- Show this section after successful login and email/password are entered -->
+      <div *ngIf="isLoggedIn && email && password">
+        <p>You are successfully logged in!</p>
+        <button (click)="redirectToAnotherPage()">Go to Another Page</button>
+      </div>
+    </div>
+  </div>

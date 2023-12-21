@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Job Posting Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="profile" data-toggle="tab" href="profilepage">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="apply" data-toggle="tab" href="applyjobs">Apply Jobs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="logout" href="">Logout</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Post Job Section -->
+            <div class="tab-pane fade show active" id="profile">
+
+                <div class="container">
+                    <div class="col-md-12">
+                        <h2 style="color: #343a40; text-align: center;">Profile</h2>
+                        <hr>
+
+                        <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+                            <!-- Your form fields -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="name">Full Name: </label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="{{name}}"
+                                        required [(ngModel)]="name" value="{{name}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="phone">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="{{email}}" required
+                                        [(ngModel)]="email" value="{{email}}">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" class="form-control" id="number" placeholder="{{number}}" required
+                                        [(ngModel)]="number" value="{{number}}">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" id="password" placeholder="{{password}}"
+                                        required [(ngModel)]="password" value="{{password}}">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="roomnumber">Room Number:</label>
+                                    <input type="text" class="form-control" id="roomnumber" placeholder="{{roomnumber}}"
+                                        required [(ngModel)]="roomnumber" value="{{roomnumber}}">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

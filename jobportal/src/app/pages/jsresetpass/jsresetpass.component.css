@@ -1,0 +1,77 @@
+*{
+    font-weight: bold;
+}
+body {
+
+    background-image: url('/assets/img/job.jpg');
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    
+  }
+  .container{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+  }
+  .form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 150px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  label {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    background-color:rgb(66, 66, 226);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .login-button{
+    background-color:rgb(66, 66, 226);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   margin-left: 280px; 
+   
+  }
+  
+  button:hover {
+    background-color: rgb(66, 66, 226);
+  }
+ a{
+    color:blue;
+ }
+ p{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+ }
+ .successful{
+    margin-bottom: 240px;
+ }
